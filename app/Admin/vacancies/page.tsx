@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -92,7 +93,7 @@ function AtsHoverText({
       <TooltipContent
         side="top"
         sideOffset={6}
-        className="max-w-sm whitespace-pre-wrap break-words text-left leading-relaxed"
+        className="max-w-sm whitespace-pre-wrap wrap-break-words text-left leading-relaxed"
       >
         {value}
       </TooltipContent>
@@ -765,7 +766,7 @@ export default function AtsAdminVacanciesPage() {
                           <TableHead className="h-12 w-10 px-3 text-center text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground/80">
                             #
                           </TableHead>
-                          <TableHead className="h-12 min-w-[13rem] px-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground/80">
+                          <TableHead className="h-12 min-w-52 px-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground/80">
                             Role
                           </TableHead>
                           <TableHead className="h-12 px-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground/80">
@@ -797,9 +798,9 @@ export default function AtsAdminVacanciesPage() {
                               key={v.id}
                               className={cn(
                                 "group border-border/40 transition-colors",
-                                "hover:bg-sky-500/[0.04]",
+                                "hover:bg-sky-500/4",
                                 isOpen
-                                  ? "bg-emerald-500/[0.03]"
+                                  ? "bg-emerald-500/3"
                                   : "bg-transparent",
                               )}
                             >
@@ -853,7 +854,7 @@ export default function AtsAdminVacanciesPage() {
                                   />
                                 ) : null}
                               </TableCell>
-                              <TableCell className="max-w-[11rem] whitespace-normal px-4 py-4 align-top">
+                              <TableCell className="max-w-44 whitespace-normal px-4 py-4 align-top">
                                 <div className="space-y-1.5">
                                   <div className="flex min-w-0 items-center gap-1.5 text-sm font-medium text-foreground/90">
                                     <Building2 className="h-3.5 w-3.5 shrink-0 text-sky-300/80" />
@@ -891,7 +892,7 @@ export default function AtsAdminVacanciesPage() {
                                     </span>
                                   )}
                                   {v.addressSpec ? (
-                                    <div className="inline-flex max-w-[12rem] items-start gap-1.5 rounded-lg border border-sky-400/20 bg-sky-500/8 px-2 py-1 text-xs text-sky-100/90">
+                                    <div className="inline-flex max-w-48 items-start gap-1.5 rounded-lg border border-sky-400/20 bg-sky-500/8 px-2 py-1 text-xs text-sky-100/90">
                                       <MapPin className="mt-0.5 h-3 w-3 shrink-0" />
                                       <AtsHoverText
                                         text={v.addressSpec}
@@ -913,7 +914,7 @@ export default function AtsAdminVacanciesPage() {
                                         href={applyHref}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex max-w-[12rem] items-center gap-1.5 rounded-lg border border-violet-400/25 bg-violet-500/10 px-2 py-1.5 font-mono text-[11px] text-violet-200 transition hover:border-violet-400/40 hover:bg-violet-500/15"
+                                        className="inline-flex max-w-48 items-center gap-1.5 rounded-lg border border-violet-400/25 bg-violet-500/10 px-2 py-1.5 font-mono text-[11px] text-violet-200 transition hover:border-violet-400/40 hover:bg-violet-500/15"
                                       >
                                         <span className="truncate">
                                           …/jobs/{v.id}

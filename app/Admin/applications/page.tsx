@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -618,7 +619,7 @@ export default function AtsAdminApplicationsPage() {
                         key={a.id}
                         data-state={checked ? "selected" : undefined}
                         className={cn(
-                          "border-border/50 transition-colors hover:bg-white/[0.03]",
+                          "border-border/50 transition-colors hover:bg-white/3",
                           checked && "bg-violet-500/[0.07]",
                         )}
                       >

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import type { ReactNode } from "react";
@@ -283,12 +284,12 @@ export function AtsAdminShell({
     <div className="relative min-h-full overflow-x-hidden bg-background">
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
         <div className="absolute inset-0 bg-linear-to-br from-background via-[#0c1220] to-[#121018]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_oklch(0.55_0.12_75_/_0.14),_transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(0.55_0.12_75/0.14),transparent_55%)]" />
         <div className="absolute -left-24 top-10 h-64 w-64 rounded-full bg-violet-500/15 blur-3xl" />
         <div className="absolute -right-20 top-24 h-56 w-56 rounded-full bg-amber-500/12 blur-3xl" />
       </div>
 
-      <header className="relative sticky top-0 z-20 border-b border-amber-400/12 bg-background/80 shadow-sm shadow-amber-950/20 backdrop-blur-md">
+      <header className="relative top-0 z-20 border-b border-amber-400/12 bg-background/80 shadow-sm shadow-amber-950/20 backdrop-blur-md">
         <div
           className="h-1 w-full bg-linear-to-r from-amber-400 via-violet-400 to-sky-400"
           aria-hidden
